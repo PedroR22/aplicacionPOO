@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Aplicacion Principios Basicos de POO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <form jsf:prependId="false">
+      <h1>Ingresa Tus Datos</h1>
+      <h:messages globalOnly="true"/>
+      <p>Cual es tu Nombre:
+        <input jsf:id="nombre" type="text" placeholder="Nombre"
+               jsf:required="true" jsf:value="#{ctrlDatos.nombre}"/>
+        <h:message for="nombre"/>
+        <br/>
+        Cual es Tu Edad:
+        <input jsf:id="edad" type="text" placeholder="Edad"
+               jsf:required="true" jsf:value="#{ctrlDatos.edad}"/>
+        <h:message for="edad"/>
+        <br/>
+        Cual es tu Animal Favorito:
+        <input jsf:id="animal" type="text" placeholder="Animal Favorito"
+               jsf:required="true" jsf:value="#{ctrlDatos.animal}"/>
+        <h:message for="animal"/>
+        <br/>
+        Cual es Tu Ciudad:
+        <input jsf:id="ciudad" type="text" placeholder="Ciudad"
+               jsf:required="true" jsf:value="#{ctrlDatos.ciudad}"/>
+        <h:message for="ciudad"/>
+        <br/>
+      </p>
+      <p>
+        <button jsf:action="#{ctrlDatos.datosobtenidos()}">Mostrar Datos</button>
+      </p>
+    </form>
+  </body>
+</html>
